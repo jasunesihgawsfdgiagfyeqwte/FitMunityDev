@@ -2,7 +2,7 @@
 //  FitMunityDevApp.swift
 //  FitMunityDev
 //
-//  Created by Haoran Jisun on 3/17/25.
+//  Created by Haoran Jisun on 3/18/25.
 //
 
 import SwiftUI
@@ -13,8 +13,10 @@ struct FitMunityDevApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainAppView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                // Force light mode to ensure consistent appearance
+                .preferredColorScheme(.light)
         }
     }
 }
